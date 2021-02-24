@@ -1,17 +1,20 @@
-token: "xxxxxxxxxxxxxxxx"    # lishogi OAuth Token with 'play as a bot' enabled.
+token: "I6TceA8Rn1IMktEZ"    # lishogi OAuth Token with 'play as a bot' enabled.
 url: "https://lishogi.org/"  # lishogi base URL. Do not change this unless locally hosted.
 
 engine:                      # engine settings
   dir: "./engines/"          # dir containing engines, relative to this project
-  name: "engine_name"        # binary name of the engine to use. Make sure the engine you use is running under the USI protocol.
+  name: "stockfishmodern"        # binary name of the engine to use. Make sure the engine you use is running under the USI protocol.
   protocol: "usi"            # "usi" protocol. No other options will be accepted here.
   ponder: false              # not supported! Setting it to 'true' will not work.
 # engine_options:            # any custom command line params to pass to the engine
 #   cpuct: 3.1
   uci_options:               # arbitrary USI options passed to the engine
     Move Overhead: 5000      # increase if your bot flags games too often. 5000 is the highest accepted value.
-    Threads: 2               # max CPU threads the engine can use
+    Threads: 4               # max CPU threads the engine can use
     USI_Hash: 256            # max memory (in megabytes) the engine can allocate
+    Slow Mover: 10
+    Ponder: false
+    
 #  go_commands:              # additional options to pass to the USI go command
 #    nodes: 1                # Search so many nodes only.
 #    depth: 5                # Search depth ply only.
@@ -20,14 +23,13 @@ engine:                      # engine settings
 
 abort_time: 30               # time to abort a game in seconds when there is no activity
 fake_think_time: false       # artificially slow down the bot to pretend like it's thinking
-move_overhead: 5000          # increase if your bot flags games too often. 5000 is the highest accepted value.
 
 challenge:                   # incoming challenges
   concurrency: 100           # number of games to play simultaneously
   sort_by: "best"            # possible values: "best", "first"
   accept_bot: true           # accepts challenges coming from other bots. Setting this to 'true' will allow games from both human and bot, but setting it to false will allow games only from human.
   only_bot: false            # Enable this to accept challenges only from bots. This will disable accepting challenges from human.
-  max_increment: 180         # maximum amount of increment to accaept a challenge. the max is 180. set to 0 for no increment
+  max_increment: 0         # maximum amount of increment to accaept a challenge. the max is 180. set to 0 for no increment
   min_increment: 0           # minimum amount of increment to accept a challenge.
   max_byoyomi: 180           # maximum amount of increment to accaept a challenge. the max is 180. set to 0 for no byoyomi
   min_byoyomi: 0             # minimum amount of increment to accept a challenge.
@@ -40,9 +42,9 @@ challenge:                   # incoming challenges
     - ultraBullet
     - bullet
     - blitz
-    - rapid
-    - classical
+#   - rapid
+#   - classical
 #   - correspondence
   modes:                     # game modes to accept
     - casual                 # unrated games
-#   - rated                  # rated games
+    - rated                  # rated games
