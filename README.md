@@ -1,9 +1,7 @@
 # Lishogi Bot
 
-[![Build Status](https://github.com/TheYoBots/Lishogi-Bot/workflows/Python%20application/badge.svg)](https://github.com/TheYoBots/Lishogi-Bot/actions)
-[![Lishogi Bot](https://img.shields.io/badge/YoBot_v2-%40Lishogi_Bot-blue.svg)](https://lishogi.org/@/YoBot_v2)
-[![Play Bot](https://img.shields.io/badge/Play_Bot-%40Lishogi-blue.svg)](https://lishogi.org/?user=YoBot_v2#friend)
-[![Lishogi Team](https://img.shields.io/badge/Lishogi_Team-%40Team-blue.svg)](https://lishogi.org/team/yobot_v2-shogi)
+[![Lishogi Bot](https://img.shields.io/badge/YoBot_v2-%40Lishogi_Bot-blue.svg)](https://lishogi.org/@/RevolutionaryBot)
+[![Play Bot](https://img.shields.io/badge/Play_Bot-%40Lishogi-blue.svg)](https://lishogi.org/?user=RevolutionaryBot#friend)
 
 A bridge between [Lichess API](https://lichess.org/api#tag/Chess-Bot) and Lishogi USI Bots. In case you don't know English, view the [Japanese Translation here (日本語翻訳)](https://github.com/TheYoBots/Lishogi-Bot/wiki/Japanese-Translation).
 
